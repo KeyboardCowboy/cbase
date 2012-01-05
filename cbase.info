@@ -1,0 +1,7 @@
+name = CBase Base Theme
+description = Base theme to support functionality and settings.
+core = 7.x
+version = 1.0
+screenshot  = screenshot.jpg
+engine = phptemplate
+
