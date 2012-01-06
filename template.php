@@ -1,5 +1,7 @@
 <?php
-
+/*******************************************************************************
+ * CORE HOOKS
+ ******************************************************************************/
 /**
  * Implementation of template_preprocess().
  *
@@ -38,6 +40,35 @@ function cbase_preprocess(&$vars, $hook) {
   }
 }
 
+/**
+ * Implements hook_theme().
+ */
+function cbase_theme($existing, $type, $theme, $path) {
+  return array(
+    'view_results_count' => array(
+      'variables' => array('view' => NULL),
+    ),
+  );
+}
+
+/*******************************************************************************
+ * CUSTOM THEMES
+ ******************************************************************************/
+/**
+ * Theme the result count for a view.
+ */
+function theme_view_results_count($variables) {
+  $view = $variables['view'];
+
+  $z = $view->total_rows;
+  $x = $view->query->offset + 1;
+  $y = min($x + $view->query->limit - 1, $z);
+  return ($view->query->limit == 0 ? "Showing all $z results." : "Showing results $x - $y of $z");
+}
+
+/*******************************************************************************
+ * THEME FUNCTIONS
+ ******************************************************************************/
 /**
  * Get ancestral data from info files in the entire family of themes stemming
  * from the active theme.
