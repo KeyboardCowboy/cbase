@@ -8,33 +8,37 @@
  * Maintains a separate directory in the theme folder called 'preprocessors'
  * where all preprocess logic is stored.  Each hook called corresponds to a
  * file of the same name.
+ *
+ * We set all processing variables into the array $cbase to protect namespacing
+ * when the preprocessors are included.
  */
 function cbase_preprocess(&$vars, $hook) {
   // Get a list of all theme paths in the current theme ancestry.
-  $theme_paths = cbase_get_ancestral_info('path');
+  $cbase['theme_paths'] = cbase_get_ancestral_info('path');
 
   // Define directories for preprocessors to include CBASE and a subthemes
   // if set.  This way the subthemes don't need to implement thier own preprocess
   // hook like this one.
-  $dirs = array();
-  foreach ($theme_paths as $path) {
-    $dirs[] = "$path/preprocessors/";
+  $cabse['dirs'] = array();
+  foreach ($cbase['theme_paths'] as $_cbase_path) {
+    $cbase['dirs'][] = "$_cbase_path/preprocessors/";
   }
 
   // Define the standard preprocessor hook.
-  $preprocessors = array($hook);
+  $cbase['preprocessors'] = array($hook);
 
   // Merge template suggestions with the standard hook preprocessor file suggestion.
-  if (is_array($vars['theme_hook_suggestions'])) {
-    $preprocessors = array_merge($preprocessors, $vars['theme_hook_suggestions']);
+  if (is_array($vars['theme_hook_suggestions']) && !empty($vars['theme_hook_suggestions'])) {
+    //kpr($vars['theme_hook_suggestions']);
+    $cbase['preprocessors'] = array_merge($cbase['preprocessors'], $vars['theme_hook_suggestions']);
   }
 
   // Load any available preprocessors
-  foreach ($preprocessors as $file) {
-    foreach ($dirs as $dir) {
-      $filepath = $dir . $file . '.inc';
-      if (file_exists($filepath)) {
-        include($filepath);
+  foreach ($cbase['preprocessors'] as $_cbase_file) {
+    foreach ($cbase['dirs'] as $_cbase_dir) {
+      $cbase['filepath'] = $_cbase_dir . $_cbase_file . '.inc';
+      if (file_exists($cbase['filepath'])) {
+        include($cbase['filepath']);
       }
     }
   }
