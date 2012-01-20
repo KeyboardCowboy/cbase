@@ -11,10 +11,10 @@
  */
 function cbase_preprocess(&$vars, $hook) {
   // Get a list of all theme paths in the current theme ancestry.
-  $theme_paths = eeretheme_get_ancestral_info('path');
+  $theme_paths = cbase_get_ancestral_info('path');
 
-  // Define directories for preprocessors to include EERETHEME and a subtheme
-  // if set.  This way the subtheme doesn't need to implement it's own preprocess
+  // Define directories for preprocessors to include CBASE and a subthemes
+  // if set.  This way the subthemes don't need to implement thier own preprocess
   // hook like this one.
   $dirs = array();
   foreach ($theme_paths as $path) {
