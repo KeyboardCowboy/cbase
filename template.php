@@ -119,3 +119,33 @@ function cbase_get_ancestral_info($key = NULL) {
 
   return $info;
 }
+
+/**
+ * Filter out and translate bad characters from the title tag.
+ *
+ * @param $string
+ *   The raw title string.
+ *
+ * @return
+ *   Clean, compliant and valid title string.
+ */
+function cbase_title_filter($string) {
+  // Strip off any HTML elements that may have snuck in.
+  $string = strip_tags($string);
+
+  // List items to be translated in order that they should be replaced.
+  $translate = array(
+    '&amp;'   => 'and',
+    '&nbsp;'  => ' ',
+    '&ndash;' => '-',
+    '&mdash;' => '-',
+    '&'       => 'and',
+  );
+
+  // Run the replacements
+  foreach ($translate as $from => $to) {
+    $string = str_replace($from, $to, $string);
+  }
+
+  return $string;
+}
