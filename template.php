@@ -29,7 +29,6 @@ function cbase_preprocess(&$vars, $hook) {
 
   // Merge template suggestions with the standard hook preprocessor file suggestion.
   if (is_array($vars['theme_hook_suggestions']) && !empty($vars['theme_hook_suggestions'])) {
-    //kpr($vars['theme_hook_suggestions']);
     $cbase['preprocessors'] = array_merge($cbase['preprocessors'], $vars['theme_hook_suggestions']);
   }
 
