@@ -6,4 +6,5 @@ screenshot  = screenshot.jpg
 engine = phptemplate
 
 ; Stylesheets
+stylesheets[all][] = css/reset.css
 stylesheets[all][] = css/cbase.css

@@ -33,7 +33,7 @@ else {
 }
 
 // Apply theming to the secondary menu
-if (!empty($vars['secondary_menu'])) {
+/*if (!empty($vars['secondary_menu'])) {
   $vars['secondary_menu']['#attributes']['id'][] = 'leftnav';
   $vars['secondary_menu']['#theme_wrappers'] = array('secondary_menu_tree');
-}
+}*/
