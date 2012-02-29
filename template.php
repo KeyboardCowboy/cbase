@@ -2,6 +2,10 @@
 /*******************************************************************************
  * CORE HOOKS
  ******************************************************************************/
+/*drupal_set_message('Message', 'status');
+drupal_set_message('Message', 'warning');
+drupal_set_message('Message', 'error');*/
+
 /**
  * Implementation of template_preprocess().
  *
@@ -33,6 +37,7 @@ function cbase_preprocess(&$vars, $hook) {
   }
 
   // Load any available preprocessors
+  //kpr($cbase['preprocessors']);
   foreach ($cbase['preprocessors'] as $_cbase_file) {
     foreach ($cbase['dirs'] as $_cbase_dir) {
       $cbase['filepath'] = $_cbase_dir . $_cbase_file . '.inc';
@@ -52,6 +57,42 @@ function cbase_theme($existing, $type, $theme, $path) {
       'variables' => array('view' => NULL),
     ),
   );
+}
+
+/*******************************************************************************
+ * THEME OVERRIDES
+ ******************************************************************************/
+/**
+ * Theme messages.
+ */
+function cbase_status_messages($variables) {
+  $display = $variables['display'];
+  $output = '';
+
+  $status_heading = array(
+    'status' => t('Status message'),
+    'error' => t('Error message'),
+    'warning' => t('Warning message'),
+  );
+  foreach (drupal_get_messages($display) as $type => $messages) {
+    $output .= "<div class=\"messages $type\">\n";
+    $output .= '  <div class="inner">';
+    if (!empty($status_heading[$type])) {
+      $output .= '<h2 class="element-invisible">' . $status_heading[$type] . "</h2>\n";
+    }
+    if (count($messages) >= 1) {
+      $output .= " <ul>\n";
+      foreach ($messages as $message) {
+        $output .= '  <li>' . $message . "</li>\n";
+      }
+      $output .= " </ul>\n";
+    }
+    else {
+      $output .= $messages[0];
+    }
+    $output .= "</div>\n</div>\n";
+  }
+  return $output;
 }
 
 /*******************************************************************************

@@ -8,3 +8,6 @@ engine = phptemplate
 ; Stylesheets
 stylesheets[all][] = css/reset.css
 stylesheets[all][] = css/cbase.css
+
+; Scripts
+scripts[] = js/cbase.js
