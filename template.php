@@ -4,40 +4,62 @@
  ******************************************************************************/
 /**
  * Implementation of template_preprocess().
- *
- * Maintains a separate directory in the theme folder called 'preprocessors'
- * where all preprocess logic is stored.  Each hook called corresponds to a
- * file of the same name.
- *
- * We set all processing variables into the array $cbase to protect namespacing
- * when the preprocessors are included.
  */
 function cbase_preprocess(&$vars, $hook) {
-  // Get a list of all theme paths in the current theme ancestry.
-  $cbase['theme_paths'] = cbase_get_ancestral_info('path');
+  _process_variables($vars, $hook, 'preprocessors');
+}
 
-  // Define directories for preprocessors to include CBASE and a subthemes
-  // if set.  This way the subthemes don't need to implement thier own preprocess
+/**
+ * Implementation of template_process().
+ */
+function cbase_process(&$vars, $hook) {
+  _process_variables($vars, $hook, 'processors');
+}
+
+/**
+ * Helper function to process variables for the preprocessor and processor hooks.
+ *
+ * Maintains separate directories in the theme folder called 'preprocessors'
+ * and 'processors' where all preprocess logic is stored.  Each hook called
+ * corresponds to a file of the same name.
+ *
+ * @param &$vars
+ *   The $variables array passed into the processing hooks.
+ * @param $hook
+ *   The processing hook.
+ * @param $directory
+ *   The directory in which to scan for processor files.
+ */
+function _process_variables(&$vars, $hook, $directory) {
+  $_vars['pp'] = $_vars['dirs'] = array();
+
+  // Define some variables for all preprocessors
+  $vars['cbase_theme_path'] = drupal_get_path('theme', 'cbase');
+
+  // Get a list of all theme paths in the current theme ancestry.
+  $_vars['theme_paths'] = cbase_get_ancestral_info('path');
+
+  // Define directories for preprocessors to include EERETHEME and a subtheme
+  // if set.  This way the subtheme doesn't need to implement it's own preprocess
   // hook like this one.
-  $cabse['dirs'] = array();
-  foreach ($cbase['theme_paths'] as $_cbase_path) {
-    $cbase['dirs'][] = "$_cbase_path/preprocessors/";
+  foreach ($_vars['theme_paths'] as $path) {
+    $_vars['dirs'][] = "$path/$directory/";
   }
 
   // Define the standard preprocessor hook.
-  $cbase['preprocessors'] = array($hook);
+  $_vars['pp'][] = $hook;
 
   // Merge template suggestions with the standard hook preprocessor file suggestion.
-  if (is_array($vars['theme_hook_suggestions']) && !empty($vars['theme_hook_suggestions'])) {
-    $cbase['preprocessors'] = array_merge($cbase['preprocessors'], $vars['theme_hook_suggestions']);
+  if (is_array($vars['theme_hook_suggestions'])) {
+    $_vars['pp'] = array_merge($_vars['pp'], $vars['theme_hook_suggestions']);
   }
 
-  // Load any available preprocessors
-  foreach ($cbase['preprocessors'] as $_cbase_file) {
-    foreach ($cbase['dirs'] as $_cbase_dir) {
-      $cbase['filepath'] = $_cbase_dir . $_cbase_file . '.inc';
-      if (file_exists($cbase['filepath'])) {
-        include($cbase['filepath']);
+  //kpr($_vars['pp']);
+  foreach ($_vars['pp'] as $file) {
+    foreach ($_vars['dirs'] as $dir) {
+      $_vars['filepath'] = $dir . $file . '.inc';
+      if (file_exists($_vars['filepath'])) {
+        include($_vars['filepath']);
       }
     }
   }
