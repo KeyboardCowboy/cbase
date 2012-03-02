@@ -68,4 +68,73 @@ table {
 /**
  * CBASE Customizations
  */
+h1 {font-size: 24pt;}
+h2 {font-size: 20pt;}
+h3 {font-size: 16pt;}
+h4 {font-size: 14pt;}
+h5 {font-size: 12pt;}
+h6 {font-size: 10pt;}
+
 #admin-menu-wrapper {font-size: 9pt;}
+
+/** MESSAGES **/
+div.messages {
+  padding: 0;
+
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(100, 100, 100, .5);
+  -moz-box-shadow: 2px 2px 2px 2px rgba(100, 100, 100, .5);
+  box-shadow: 2px 2px 2px 2px rgba(100, 100, 100, .5);
+}
+
+div.messages .inner {
+  padding: 10px 10px 10px 50px;
+}
+
+div.status {
+  border: 1px solid #669966;
+  color: #fff;
+
+  background: #a5bfa4; /* Old browsers */
+  background: -moz-linear-gradient(top,  #a5bfa4 0%, #778d76 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a5bfa4), color-stop(100%,#778d76)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #a5bfa4 0%,#778d76 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #a5bfa4 0%,#778d76 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #a5bfa4 0%,#778d76 100%); /* IE10+ */
+  background: linear-gradient(top,  #a5bfa4 0%,#778d76 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a5bfa4', endColorstr='#778d76',GradientType=0 ); /* IE6-9 */
+}
+div.status .inner {background: url(../images/message-24-ok.png) 14px 6px no-repeat;}
+
+div.warning {
+  border: 1px solid #996600;
+  color: #996600;
+
+  background: #fcf8d1; /* Old browsers */
+  background: -moz-linear-gradient(top,  #fcf8d1 0%, #efe397 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcf8d1), color-stop(100%,#efe397)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #fcf8d1 0%,#efe397 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #fcf8d1 0%,#efe397 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #fcf8d1 0%,#efe397 100%); /* IE10+ */
+  background: linear-gradient(top,  #fcf8d1 0%,#efe397 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcf8d1', endColorstr='#efe397',GradientType=0 ); /* IE6-9 */
+}
+div.warning .inner {background: url(../images/message-24-warning.png) 14px 6px no-repeat;}
+
+div.error {
+  border: 1px solid #ff7777;
+  color: #660000;
+
+  background: #f9c0c0; /* Old browsers */
+  background: -moz-linear-gradient(top,  #f9c0c0 0%, #ffa3a3 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9c0c0), color-stop(100%,#ffa3a3)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #f9c0c0 0%,#ffa3a3 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #f9c0c0 0%,#ffa3a3 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #f9c0c0 0%,#ffa3a3 100%); /* IE10+ */
+  background: linear-gradient(top,  #f9c0c0 0%,#ffa3a3 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9c0c0', endColorstr='#ffa3a3',GradientType=0 ); /* IE6-9 */
+}
+div.error .inner {background: url(../images/message-24-error.png) 14px 6px no-repeat;}
