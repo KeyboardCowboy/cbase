@@ -79,7 +79,8 @@ h6 {font-size: 10pt;}
 
 /** MESSAGES **/
 div.messages {
-  padding: 0;
+  line-height: 1.2em;
+  padding: 5px 0;
 
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;

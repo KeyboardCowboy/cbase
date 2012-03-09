@@ -30,21 +30,11 @@ function cbase_process(&$vars, $hook) {
  * @param $directory
  *   The directory in which to scan for processor files.
  */
-function _process_variables(&$vars, $hook, $directory) {
+function _process_variables(&$vars, $hook, $directory = 'preprocessors') {
   $_vars['pp'] = $_vars['dirs'] = array();
 
   // Define some variables for all preprocessors
   $vars['cbase_theme_path'] = drupal_get_path('theme', 'cbase');
-
-  // Get a list of all theme paths in the current theme ancestry.
-  $_vars['theme_paths'] = cbase_get_ancestral_info('path');
-
-  // Define directories for preprocessors to include EERETHEME and a subtheme
-  // if set.  This way the subtheme doesn't need to implement it's own preprocess
-  // hook like this one.
-  foreach ($_vars['theme_paths'] as $path) {
-    $_vars['dirs'][] = "$path/$directory/";
-  }
 
   // Define the standard preprocessor hook.
   $_vars['pp'][] = $hook;
@@ -57,11 +47,9 @@ function _process_variables(&$vars, $hook, $directory) {
   //kpr($_vars['pp']);
   // Load any available preprocessors
   foreach ($_vars['pp'] as $file) {
-    foreach ($_vars['dirs'] as $dir) {
-      $_vars['filepath'] = $dir . $file . '.inc';
-      if (file_exists($_vars['filepath'])) {
-        include($_vars['filepath']);
-      }
+    $_vars['filepath'] = $vars['cbase_theme_path'] . "/$directory/$file" . '.inc';
+    if (file_exists($_vars['filepath'])) {
+      include($_vars['filepath']);
     }
   }
 }
