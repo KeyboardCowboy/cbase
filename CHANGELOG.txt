@@ -1,0 +1,9 @@
+CBASE v7.x-2.x-dev, 2012-Mar-12 13:51:13 ChrisAlbrecht
+--------------------------------------------------------------------------------
+- Added a subtheme template directory.
+- Altered the template.php process and preprocessors to not call out to subthemes
+  anymore.  This was causing issues in variable scope if subthemes were
+  implementing their own variables via the process and preprocess hooks.  A
+  common function now should be placed in each process and preprocess hook
+  in the subthemes.
+- Renamed cbase_get_ancestral_info to cbase_get_family_info.

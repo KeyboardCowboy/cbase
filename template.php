@@ -6,14 +6,14 @@
  * Implementation of template_preprocess().
  */
 function cbase_preprocess(&$vars, $hook) {
-  _process_variables($vars, $hook, 'preprocessors');
+  _process_variables($vars, $hook, 'cbase', 'preprocessors');
 }
 
 /**
  * Implementation of template_process().
  */
 function cbase_process(&$vars, $hook) {
-  _process_variables($vars, $hook, 'processors');
+  _process_variables($vars, $hook, 'cbase', 'processors');
 }
 
 /**
@@ -30,11 +30,11 @@ function cbase_process(&$vars, $hook) {
  * @param $directory
  *   The directory in which to scan for processor files.
  */
-function _process_variables(&$vars, $hook, $directory = 'preprocessors') {
+function _process_variables(&$vars, $hook, $theme, $directory = 'preprocessors') {
   $_vars['pp'] = $_vars['dirs'] = array();
 
-  // Define some variables for all preprocessors
-  $vars['cbase_theme_path'] = drupal_get_path('theme', 'cbase');
+  // Define theme paths for all themes in the family.
+  $vars['theme_paths'] = cbase_get_family_info('path');
 
   // Define the standard preprocessor hook.
   $_vars['pp'][] = $hook;
@@ -47,7 +47,7 @@ function _process_variables(&$vars, $hook, $directory = 'preprocessors') {
   //kpr($_vars['pp']);
   // Load any available preprocessors
   foreach ($_vars['pp'] as $file) {
-    $_vars['filepath'] = $vars['cbase_theme_path'] . "/$directory/$file" . '.inc';
+    $_vars['filepath'] = $vars['theme_paths'][$theme] . "/$directory/$file" . '.inc';
     if (file_exists($_vars['filepath'])) {
       include($_vars['filepath']);
     }
@@ -130,7 +130,7 @@ function theme_view_results_count($variables) {
  *   All $key values from all .info files in the ancestry, ordered oldest to
  *   newest.  Full info data if $key is NULL.
  */
-function cbase_get_ancestral_info($key = NULL) {
+function cbase_get_family_info($key = NULL) {
   global $theme;
 
   $all_themes = list_themes();

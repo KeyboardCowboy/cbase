@@ -5,7 +5,7 @@
 /**
  * Load any conditional stylesheets.
  */
-$condsheets = cbase_get_ancestral_info('conditional_stylesheets');
+$condsheets = cbase_get_family_info('conditional_stylesheets');
 $weight = 900;
 foreach ($condsheets as $themename => $theme_conditions) {
   foreach ($theme_conditions as $condition => $files) {
