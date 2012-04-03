@@ -1,0 +1,4 @@
+name = cBase Subtheme
+description = Copy my to a new theme directory.
+core = 7.x
+engine = phptemplate
