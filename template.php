@@ -178,6 +178,27 @@ function cbase_get_family_info($key = NULL) {
 }
 
 /**
+ * Create an element for en empty region.
+ *
+ * @param $page
+ *   The page array containing the region data.
+ * @param $region
+ *   The region to initialize.
+ */
+function cbase_init_region(&$page, $region) {
+  if (!isset($page[$region]) || empty($page[$region])) {
+    $page[$region]['#theme_wrappers'][] = 'region';
+    $page[$region]['#region'] = $region;
+  }
+
+  if (module_exists($context)) {
+    if ($plugin = context_get_plugin('reaction', 'region')) {
+      $plugin->execute($page);
+    }
+  }
+}
+
+/**
  * Filter out and translate bad characters from the title tag.
  *
  * @param $string
