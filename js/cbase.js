@@ -64,18 +64,24 @@ function cbase_adjust_admin_tools() {
   var side = $("#admin-toolbar .admin-blocks, #admin-toolbar .admin-toggle");
 
   if (side.length > 0) {
+    // If the admin menu is to be rendered on this page, listen for it to be
+    // added then adjust the sidebar.
+    if (Drupal.settings.admin_menu) {
+      toplisten = setInterval(function() {
+        var menu = $("#admin-menu");
+
+        // If the menu has loaded, slide the sidebar and stop the itterations.
+        if (menu.length > 0) {
+          side.animate({'top': menu.inScrollView('top')});
+          clearInterval(toplisten);
+        }
+      }, 250);
+    }
+
     $(window).scroll(function() {
-      menu = $("#admin-menu");
-
+      var menu = $("#admin-menu");
       if (menu.length > 0) {
-        pos = menu.inScrollView('top');
-
-        if (pos) {
-          side.css({'top': Math.max(0, pos)});
-        }
-        else {
-          side.css({'top': 0});
-        }
+        side.animate({'top': menu.inScrollView('top')});
       }
     });
   }
