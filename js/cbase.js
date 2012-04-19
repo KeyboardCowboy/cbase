@@ -3,6 +3,42 @@
  * A Collection of common theming tools.
  */
 (function ($) {
+  $(document).ready(function() {
+    // Keep the admin toolbar below the admin menu.
+    cbase_adjust_admin_tools();
+  });
+
+  /**
+   * Determine whether a given element is currently in the scrolled view.
+   *
+   * @param p [top | bottom]
+   *   Position to check for.
+   *   If set, return the difference between the outer edge of the element and
+   *     the respective position (top or bottom).
+   *   If not set, return boolen as to whether the element is anywhere in the
+   *     visible doc view.
+   */
+  $.fn.inScrollView = function(p) {
+    var e = $(this);
+    var dT = $(window).scrollTop();
+    var dB = dT + $(window).height();
+    var eT = e.offset().top;
+    var eB = eT + e.height();
+
+    if (p && p == 'top') {
+      return Math.max(0, (eB - dT));
+    }
+
+    if (p && p == 'bottom') {
+      return Math.max(0, (dB - eT));
+    }
+
+    return ((eB <= dB) && (dB - eB));
+  }
+
+  /**
+   * Set all elements in the range to the same height.
+   */
   $.fn.matchHeight = function() {
     var e = $(this);
 
@@ -20,4 +56,28 @@
     // Set the heights.
     e.height(height);
   };
+
+/**
+ * Push the Admin sidebar below the Admin Menu.
+ */
+function cbase_adjust_admin_tools() {
+  var side = $("#admin-toolbar .admin-blocks, #admin-toolbar .admin-toggle");
+
+  if (side.length > 0) {
+    $(window).scroll(function() {
+      menu = $("#admin-menu");
+
+      if (menu.length > 0) {
+        pos = menu.inScrollView('top');
+
+        if (pos) {
+          side.css({'top': Math.max(0, pos)});
+        }
+        else {
+          side.css({'top': 0});
+        }
+      }
+    });
+  }
+}
 })(jQuery);
