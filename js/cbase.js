@@ -81,7 +81,7 @@ function cbase_adjust_admin_tools() {
     $(window).scroll(function() {
       var menu = $("#admin-menu");
       if (menu.length > 0) {
-        side.animate({'top': menu.inScrollView('top')});
+        side.css({'top': menu.inScrollView('top')});
       }
     });
   }
