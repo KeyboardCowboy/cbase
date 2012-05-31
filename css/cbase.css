@@ -96,9 +96,9 @@ div.messages .inner {
   min-height: 24px;
   padding-left: 30px;
 }
-div.messages .inner ul {
-  padding-top: 2px;
-}
+div.messages .inner ul {padding-top: 2px;}
+div.messages ul li,
+div.messages .item-list ul li {padding: 0 0 0 1em;}
 
 div.status {
   border: 1px solid #669966;
