@@ -133,14 +133,22 @@ function theme_view_results_count($variables) {
 function cbase_get_family_info($key = NULL) {
   global $theme;
   $data = &drupal_static(__FUNCTION__);
-  //kpr($data);
 
   // Check for cached data
   if (!isset($data[$key])) {
     $all_themes = list_themes();
-    $base_themes = array_keys((isset($all_themes[$theme]->base_themes) ? $all_themes[$theme]->base_themes : (isset($all_themes[$theme]->base_theme) ? array($all_themes[$theme]->base_theme => 0) : array())));
-    $theme_ancestry = array_merge($base_themes, array($theme));
-    $info = array();
+
+    // Build an array of base-theme ancestry
+    $theme_ancestry[0] = $theme;
+    $next_theme = $all_themes[$theme];
+    while (isset($next_theme->base_theme) && !empty($next_theme->base_theme)) {
+      $theme_ancestry[] = $next_theme->base_theme;
+      $next_theme = $all_themes[$next_theme->base_theme];
+    }
+
+    // Invert the array so the oldest theme (root theme) is first and the
+    // current default theme is last.
+    $theme_ancestry = array_reverse($theme_ancestry);
 
     // These keys are exclusive to each theme.  The value of the parent theme is
     // irrevelent to the child theme, and so they must be explicitly defined in
@@ -149,6 +157,7 @@ function cbase_get_family_info($key = NULL) {
 
     // If the key is an overridden value, we don't need to combine all ancestral
     // values, just return the active theme's value.
+    $info = array();
     if (in_array($key, $overrides)) {
       $info[$key] = $all_themes[$theme]->$key;
     }
@@ -178,7 +187,7 @@ function cbase_get_family_info($key = NULL) {
 }
 
 /**
- * Create an element for en empty region.
+ * Create an element for an empty region.
  *
  * @param $page
  *   The page array containing the region data.
