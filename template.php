@@ -44,14 +44,31 @@ function _process_variables(&$vars, $hook, $theme, $directory = 'preprocessors')
     $_vars['pp'] = array_merge($_vars['pp'], $vars['theme_hook_suggestions']);
   }
 
-  //kpr($_vars['pp']);
   // Load any available preprocessors
+  $_vars['call_pp'] = array();
   foreach ($_vars['pp'] as $file) {
     $_vars['filepath'] = $vars['theme_paths'][$theme] . "/$directory/$file" . '.inc';
+    $_vars['call_pp'][$file][$_vars['filepath']] = FALSE;
     if (file_exists($_vars['filepath'])) {
+      $_vars['call_pp'][$file][$_vars['filepath']] = TRUE;
       include($_vars['filepath']);
     }
   }
+
+  /**
+   * Debugger for which preprocessors are being called.
+   *
+  foreach ($_vars['call_pp'] as $_pp => $_paths) {
+    foreach ($_paths as $_path => $_found) {
+      if ($_found == TRUE) {
+        print "<strong><pre>" . kpr("$_pp: $_path", 1) . "</pre></strong>";
+      }
+      else {
+        print "<pre>" . kpr("$_pp: $_path", 1) . '</pre>';
+      }
+    }
+  }
+  */
 }
 
 /**
