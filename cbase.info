@@ -9,5 +9,6 @@ engine = phptemplate
 stylesheets[all][] = css/cbase.css
 
 ; Scripts
+scripts[] = js/scrollTo-1.4.2.js
 scripts[] = js/localscroll-1.2.7.js
 scripts[] = js/cbase.js
