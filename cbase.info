@@ -12,3 +12,6 @@ stylesheets[all][] = css/cbase.css
 scripts[] = js/scrollTo-1.4.2.js
 scripts[] = js/localscroll-1.2.7.js
 scripts[] = js/cbase.js
+
+; Theme Settings
+settings[cbase_css] = 1
