@@ -6,6 +6,9 @@
   $(document).ready(function() {
     // Keep the admin toolbar below the admin menu.
     cbase_adjust_admin_tools();
+
+    // Implement localscroll.
+    $.localScroll();
   });
 
   /**

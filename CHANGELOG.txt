@@ -1,3 +1,7 @@
+CBASE v7.x-2.x-dev, 2012-Jun-18 09:01:25 ChrisAlbrecht
+--------------------------------------------------------------------------------
+- Added LocalScroll library.
+
 CBASE v7.x-2.x-dev, 2012-Apr-03 12:10:57 ChrisAlbrecht
 --------------------------------------------------------------------------------
 - Added data to the subtheme .info file to prevent menus from breaking.
