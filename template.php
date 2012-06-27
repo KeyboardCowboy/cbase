@@ -119,7 +119,7 @@ function cbase_status_messages($variables) {
 }
 
 /*******************************************************************************
- * CUSTOM THEMES
+ * CUSTOM THEME FUNCTIONS
  ******************************************************************************/
 /**
  * Theme the result count for a view.

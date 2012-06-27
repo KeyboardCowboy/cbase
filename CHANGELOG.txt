@@ -1,3 +1,7 @@
+CBASE v7.x-2.x-dev, 2012-Jun-27 09:59:35 ChrisAlbrecht
+--------------------------------------------------------------------------------
+- Added vertical tabs and screenshot header to theme settings form.
+
 CBASE v7.x-2.x-dev, 2012-Jun-18 11:41:00 ChrisAlbrecht
 --------------------------------------------------------------------------------
 - Added theme setting to exclude cbase css.

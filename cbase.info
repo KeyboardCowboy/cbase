@@ -15,3 +15,4 @@ scripts[] = js/cbase.js
 
 ; Theme Settings
 settings[cbase_css] = 1
+settings[cbase_localscroll] = 1
