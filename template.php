@@ -243,6 +243,7 @@ function cbase_title_filter($string) {
     '&nbsp;'  => ' ',
     '&ndash;' => '-',
     '&mdash;' => '-',
+    '&#039;'  => "'",
     '&'       => 'and',
   );
 
