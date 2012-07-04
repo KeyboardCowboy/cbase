@@ -14,20 +14,26 @@ function cbase_form_system_theme_settings_alter(&$form, &$form_state) {
     '#weight' => -999,
   );
 
-  // Define a vertical tabs items
-  $form['tabs'] = array(
-
-  );
-
   // Configure Stylesheets
   $form['style'] = array(
     '#type' => 'fieldset',
     '#title' => t('Stylesheets'),
     '#collapsible' => TRUE,
   );
+
   $form['style']['cbase_css'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Use CBase Reset Stylesheet'),
+    '#type' => 'checkboxes',
+    '#title' => t('Enable/Disable Base Stylesheets'),
+    '#description' => t('CBase provides helpful stylesheets to get started and Drupal adds 4 stylesheets be default.  You can optionally enable/disable any of these stylesheets for this theme here.'),
+    '#options' => array(
+      'cbase.base.css'      => t('CBase System Standards (cbase.base.css)'),
+      'cbase.reset.css'     => t('CBase Reset Stylesheet (cbase.reset.css)'),
+      'cbase.messages.css'  => t('CBase Message Styles (cbase.messages.css)'),
+      'system.base.css'     => t('System Base Styles (system.base.css)'),
+      'system.menus.css'    => t('System Menu Styles (system.menus.css)'),
+      'system.messages.css' => t('System Message Styles (system.messages.css)'),
+      'system.theme.css'    => t('System Theme Styles (system.theme.css)'),
+    ),
     '#default_value' => theme_get_setting('cbase_css'),
   );
 

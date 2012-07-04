@@ -1,0 +1,19 @@
+/**
+ * @file
+ * Standardizations, tweaks and fixes.
+ */
+/**
+ * Set a standard font size for admin menu.
+ */
+#admin-menu-wrapper {font-size: 9pt;}
+
+/**
+ * Fixes horizontal scrollbar issue in admin menu.
+ */
+#admin-menu {
+ margin: 0 0 0 -20px;
+ padding: 0 0 0 20px;
+ -moz-box-shadow: 10px 3px 20px #000;
+ -webkit-box-shadow: 10px 3px 20px #000;
+ box-shadow: 10px 3px 20px #000;
+}

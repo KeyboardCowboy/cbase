@@ -14,3 +14,18 @@ foreach ($condsheets as $themename => $theme_conditions) {
     }
   }
 }
+
+/**
+ * Implement localscroll if selected.
+ */
+if (theme_get_setting('cbase_localscroll')) {
+  $js = "
+  (function ($) {
+    $(document).ready(function() {
+      // Implement localscroll.
+      $.localScroll({duration: 500});
+    });
+  })(jQuery);
+  ";
+  drupal_add_js($js, 'inline');
+}
