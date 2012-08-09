@@ -46,8 +46,10 @@ function _process_variables(&$vars, $hook, $theme, $directory = 'preprocessors')
 
   // Load any available preprocessors
   $_vars['call_pp'] = array();
+  //kpr($_vars['pp']);
   foreach ($_vars['pp'] as $file) {
     $_vars['filepath'] = $vars['theme_paths'][$theme] . "/$directory/$file" . '.inc';
+    //kpr($_vars['filepath']);
     $_vars['call_pp'][$file][$_vars['filepath']] = FALSE;
     if (file_exists($_vars['filepath'])) {
       $_vars['call_pp'][$file][$_vars['filepath']] = TRUE;

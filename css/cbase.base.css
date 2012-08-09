@@ -17,3 +17,11 @@
  -webkit-box-shadow: 10px 3px 20px #000;
  box-shadow: 10px 3px 20px #000;
 }
+
+/**
+ * Fixes hard-to-catch gears on contextual links.
+ */
+html.js div.contextual-links-wrapper {
+  min-width: 34px;
+  min-height: 34px;
+}
