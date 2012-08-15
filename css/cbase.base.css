@@ -21,6 +21,7 @@
 /**
  * Fixes hard-to-catch gears on contextual links.
  */
+div.panel-pane div.admin-links {width: 100%;}
 html.js div.contextual-links-wrapper {
   min-width: 34px;
   min-height: 34px;
