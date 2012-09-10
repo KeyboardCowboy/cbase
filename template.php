@@ -78,6 +78,9 @@ function _process_variables(&$vars, $hook, $theme, $directory = 'preprocessors')
  */
 function cbase_theme($existing, $type, $theme, $path) {
   return array(
+    'unpublished_indicator' => array(
+      'variables' => array(),
+    ),
     'view_results_count' => array(
       'variables' => array('view' => NULL),
     ),
@@ -121,8 +124,15 @@ function cbase_status_messages($variables) {
 }
 
 /*******************************************************************************
- * CUSTOM THEME FUNCTIONS
+ * CUSTOM THEMES
  ******************************************************************************/
+/**
+ * Theme a custom unpublished indicator.
+ */
+function theme_unpublished_indicator($vars) {
+  return '<div class="unpublished-indicator">&nbsp;</div>';
+}
+
 /**
  * Theme the result count for a view.
  */

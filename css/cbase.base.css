@@ -27,3 +27,25 @@ html.js div.contextual-links-wrapper {
   min-width: 34px;
   min-height: 34px;
 }
+
+/**
+ * Styles for the custom unpublished indicator.
+ */
+.node-unpublished {
+  position: relative;
+  padding: 0 .5em;
+  border: 2px solid #990000;
+
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.unpublished-indicator {
+  width: 50px;
+  height: 175px;
+  position: absolute;
+  background: transparent url("../images/unpublished-tab.png") top right no-repeat;
+  top: 0;
+  left: 0;
+  margin-left: -50px;
+}

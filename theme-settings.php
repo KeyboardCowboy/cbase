@@ -49,6 +49,12 @@ function cbase_form_system_theme_settings_alter(&$form, &$form_state) {
     '#description' => t('Page reference links, such as \'Back to Top\' links, will scroll instead of jump to position.'),
     '#default_value' => theme_get_setting('cbase_localscroll'),
   );
+  $form['ui']['unpublished_indicator'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Unpublished Indicator'),
+    '#description' => t('Places a prominent indicator tab with this word next to unpublished content.'),
+    '#default_value' => theme_get_setting('unpublished_indicator'),
+  );
 
   // Adjust labels
   $form['theme_settings']['#title'] = t('Features');
