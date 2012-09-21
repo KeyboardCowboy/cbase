@@ -50,40 +50,40 @@
     // Find the height of the tallest element.
     var height = 0;
     e.each(function(i) {
-      height = Math.max(height, $(this).height());
+      height = Math.max(height, $(this).outerHeight());
     });
 
     // Set the heights.
     e.height(height);
   };
 
-/**
- * Push the Admin sidebar below the Admin Menu.
- */
-function cbase_adjust_admin_tools() {
-  var side = $("#admin-toolbar .admin-blocks, #admin-toolbar .admin-toggle");
+  /**
+   * Push the Admin sidebar below the Admin Menu.
+   */
+  function cbase_adjust_admin_tools() {
+    var side = $("#admin-toolbar .admin-blocks, #admin-toolbar .admin-toggle");
 
-  if (side.length > 0) {
-    // If the admin menu is to be rendered on this page, listen for it to be
-    // added then adjust the sidebar.
-    if (Drupal.settings.admin_menu) {
-      toplisten = setInterval(function() {
-        var menu = $("#admin-menu");
+    if (side.length > 0) {
+      // If the admin menu is to be rendered on this page, listen for it to be
+      // added then adjust the sidebar.
+      if (Drupal.settings.admin_menu) {
+        toplisten = setInterval(function() {
+          var menu = $("#admin-menu");
 
-        // If the menu has loaded, slide the sidebar and stop the itterations.
-        if (menu.length > 0) {
-          side.animate({'top': menu.inScrollView('top')});
-          clearInterval(toplisten);
-        }
-      }, 250);
-    }
-
-    $(window).scroll(function() {
-      var menu = $("#admin-menu");
-      if (menu.length > 0) {
-        side.css({'top': menu.inScrollView('top')});
+          // If the menu has loaded, slide the sidebar and stop the itterations.
+          if (menu.length > 0) {
+            side.animate({'top': menu.inScrollView('top')});
+            clearInterval(toplisten);
+          }
+        }, 250);
       }
-    });
+
+      $(window).scroll(function() {
+        var menu = $("#admin-menu");
+        if (menu.length > 0) {
+          side.css({'top': menu.inScrollView('top')});
+        }
+      });
+    }
   }
-}
 })(jQuery);

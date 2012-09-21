@@ -1,3 +1,8 @@
+CBASE v7.x-2.x-dev, 2012-Sep-21 15:00:51 ChrisAlbrecht
+--------------------------------------------------------------------------------
+- Added DRAFT indicator and extended CSS snippets
+- Fixed bug in JS matchHeight function to take padding and margins into account.
+
 CBASE v7.x-2.x-dev, 2012-Jun-27 09:59:35 ChrisAlbrecht
 --------------------------------------------------------------------------------
 - Added vertical tabs and screenshot header to theme settings form.
