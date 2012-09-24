@@ -39,3 +39,17 @@ else {
   $vars['secondary_menu']['#theme_wrappers'] = array('secondary_menu_tree');
 }*/
 
+/**
+ * Add a page suggestion to the theme hooks for a panels layout page.
+ */
+if (module_exists('panels')) {
+  $display = panels_get_current_page_display();
+  if (is_object($display) && isset($display->layout)) {
+    $vars['theme_hook_suggestions'][] = "page__panels__{$display->layout}";
+
+    // Add a front page panels layout suggestion as well.
+    if (in_array('page__front', $vars['theme_hook_suggestions'])) {
+      $vars['theme_hook_suggestions'][] = "page__front__panels__{$display->layout}";
+    }
+  }
+}

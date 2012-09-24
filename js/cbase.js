@@ -50,11 +50,15 @@
     // Find the height of the tallest element.
     var height = 0;
     e.each(function(i) {
-      height = Math.max(height, $(this).outerHeight());
+      height = Math.max(height, $(this).outerHeight(true));
     });
 
-    // Set the heights.
-    e.height(height);
+    // Set the height for each element taking into account border, padding and
+    // margins set for each.
+    e.each(function(i) {
+      var diff = $(this).outerHeight(true) - $(this).height();
+      $(this).height(height - diff);
+    });
   };
 
   /**
