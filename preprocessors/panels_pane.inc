@@ -14,7 +14,7 @@ $layout = $vars['display']->layout;
  * Not sure why the first two items don't make it on the final list, but their
  * existence seems to allow the other ones to remain, thus we add them twice
  * in order for them to be included in the final list.
- */
+ */ 
 $vars['theme_hook_suggestions'] += array(
   "panels_pane__{$layout}__{$type}",
   "panels_pane__{$layout}__{$panel}__{$type}",

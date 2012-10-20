@@ -57,7 +57,7 @@
     // margins set for each.
     e.each(function(i) {
       var diff = $(this).outerHeight(true) - $(this).height();
-      $(this).height(height - diff);
+      $(this).css({'min-height': height - diff + 'px'});
     });
   };
 

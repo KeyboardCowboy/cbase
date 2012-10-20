@@ -1,7 +1,7 @@
 name = CBase
 description = Base theme to support simple sub-theme implementation, functionality and settings.
 core = 7.x
-version = 7.x-1.0-dev
+version = 7.x-2.0-beta2
 screenshot  = screenshot.jpg
 engine = phptemplate
 

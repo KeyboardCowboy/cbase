@@ -27,15 +27,20 @@ function cbase_process(&$vars, $hook) {
  *   The $variables array passed into the processing hooks.
  * @param $hook
  *   The processing hook.
+ * @param $theme
+ *   The name of the theme calling the processors.
  * @param $directory
  *   The directory in which to scan for processor files.
  */
 function _process_variables(&$vars, $hook, $theme, $directory = 'preprocessors') {
-  $_vars['pp'] = $_vars['dirs'] = array();
+  $_vars['pp'] = array();
 
   // Define theme paths for all themes in the family.
   $vars['theme_paths'] = cbase_get_family_info('path');
 
+  /**
+   * Build a list of processing files to search for.
+   */
   // Define the standard preprocessor hook.
   $_vars['pp'][] = $hook;
 
