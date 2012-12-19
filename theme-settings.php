@@ -26,8 +26,8 @@ function cbase_form_system_theme_settings_alter(&$form, &$form_state) {
     '#title' => t('Enable/Disable Base Stylesheets'),
     '#description' => t('CBase provides helpful stylesheets to get started and Drupal adds 4 stylesheets be default.  You can optionally enable/disable any of these stylesheets for this theme here.'),
     '#options' => array(
-      'cbase.base.css'      => t('CBase System Standards (cbase.base.css)'),
       'cbase.reset.css'     => t('CBase Reset Stylesheet (cbase.reset.css)'),
+      'cbase.base.css'      => t('CBase Base Styles (cbase.base.css)'),
       'cbase.messages.css'  => t('CBase Message Styles (cbase.messages.css)'),
       'system.base.css'     => t('System Base Styles (system.base.css)'),
       'system.menus.css'    => t('System Menu Styles (system.menus.css)'),
@@ -49,11 +49,19 @@ function cbase_form_system_theme_settings_alter(&$form, &$form_state) {
     '#description' => t('Page reference links, such as \'Back to Top\' links, will scroll instead of jump to position.'),
     '#default_value' => theme_get_setting('cbase_localscroll'),
   );
-  $form['ui']['unpublished_indicator'] = array(
-    '#type' => 'textfield',
+  $form['ui']['cbase_unpublished_indicator'] = array(
+    '#type' => 'select',
     '#title' => t('Unpublished Indicator'),
-    '#description' => t('Places a prominent indicator tab with this word next to unpublished content.'),
-    '#default_value' => theme_get_setting('unpublished_indicator'),
+    '#description' => t('Enhances the default unpublished indicator.') . '<br /><em>' . t('CBase Base stylesheert must be enabled.') . '</em>',
+    '#options' => array(
+      ''       => t('None'),
+      'side-left'  => t('Left Side'),
+      'top-left'   => t('Top Left'),
+      'top-mid'    => t('Top Middle'),
+      'top-right'  => t('Top Right'),
+      'side-right' => t('Right Side'),
+    ),
+    '#default_value' => theme_get_setting('cbase_unpublished_indicator'),
   );
 
   // Adjust labels

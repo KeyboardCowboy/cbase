@@ -31,7 +31,7 @@ html.js div.contextual-links-wrapper {
 /**
  * Styles for the custom unpublished indicator.
  */
-.node-unpublished {
+.cbase-unpublished {
   position: relative;
   padding: 0 .5em;
   border: 2px solid #990000;
@@ -40,12 +40,52 @@ html.js div.contextual-links-wrapper {
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
-.unpublished-indicator {
-  width: 50px;
-  height: 175px;
+
+.unpublished-indicator.side-left {
+  width: 36px;
+  height: 125px;
   position: absolute;
-  background: transparent url("../images/unpublished-tab.png") top right no-repeat;
+  background: transparent url("../images/draft-left.png") top right no-repeat;
   top: 0;
   left: 0;
-  margin-left: -50px;
+  margin-left: -36px;
+}
+.unpublished-indicator.side-right {
+  width: 36px;
+  height: 125px;
+  position: absolute;
+  background: transparent url("../images/draft-right.png") top left no-repeat;
+  top: 0;
+  right: 0;
+  margin-right: -36px;
+}
+.unpublished-indicator.top-left {
+  width: 100%;
+  height: 36px;
+  position: absolute;
+  background: transparent url("../images/draft-top.png") bottom left no-repeat;
+  top: 0;
+  left: 0;
+  margin-top: -36px;
+  text-align: left;
+}
+.unpublished-indicator.top-mid {
+  width: 100%;
+  height: 36px;
+  position: absolute;
+  background: transparent url("../images/draft-top.png") bottom center no-repeat;
+  top: 0;
+  left: 0;
+  margin-top: -36px;
+  text-align: center;
+}
+.unpublished-indicator.top-right {
+  width: 100%;
+  height: 36px;
+  position: absolute;
+  background: transparent url("../images/draft-top.png") bottom right no-repeat;
+  top: 0;
+  right: 0;
+  margin-top: -36px;
+  text-align: right;
 }
