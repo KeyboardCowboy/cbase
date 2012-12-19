@@ -1,6 +1,7 @@
 <?php
 /*******************************************************************************
- * CORE HOOKS
+ * Copy both of these functions into your subtheme's template.php file and
+ * replace cbase with your theme's name.
  ******************************************************************************/
 /**
  * Implementation of template_preprocess().
@@ -15,6 +16,7 @@ function cbase_preprocess(&$vars, $hook) {
 function cbase_process(&$vars, $hook) {
   _process_variables($vars, $hook, 'cbase', 'processors');
 }
+/******************************************************************************/
 
 /**
  * Helper function to process variables for the preprocessor and processor hooks.
@@ -84,7 +86,7 @@ function _process_variables(&$vars, $hook, $theme, $directory = 'preprocessors')
 function cbase_theme($existing, $type, $theme, $path) {
   return array(
     'unpublished_indicator' => array(
-      'variables' => array(),
+      'variables' => array('position' => 'side-left'),
     ),
     'view_results_count' => array(
       'variables' => array('view' => NULL),
@@ -134,14 +136,14 @@ function cbase_status_messages($variables) {
 /**
  * Theme a custom unpublished indicator.
  */
-function theme_unpublished_indicator($vars) {
-  return '<div class="unpublished-indicator">&nbsp;</div>';
+function cbase_unpublished_indicator($vars) {
+  return '<div class="unpublished-indicator ' . $vars['position'] . '">&nbsp;</div>';
 }
 
 /**
  * Theme the result count for a view.
  */
-function theme_view_results_count($variables) {
+function cbase_view_results_count($variables) {
   $view = $variables['view'];
 
   $z = $view->total_rows;

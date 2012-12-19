@@ -9,5 +9,10 @@
 $type = theme_get_setting('cbase_unpublished_indicator');
 if (!$vars['status'] && $type) {
   $vars['classes_array'][] = 'cbase-unpublished';
-  $vars['content']['body'][0]['#markup'] .= '<div class="unpublished-indicator ' . $type . '">&nbsp;</div>';
+  $vars['content']['unpublished_indicator'] = array(
+    '#theme' => 'unpublished_indicator',
+    '#position' => $type,
+  );
+  //$vars['content']['body'][0]['#markup'] .= '<div class="unpublished-indicator ' . $type . '">&nbsp;</div>';
 }
+kpr($vars['content']);
