@@ -1,0 +1,10 @@
+/**
+ * Common, useful styles.
+ */
+img.embedded        {margin-top: .5em;}
+img.embedded.top,
+img.embedded.mid    {margin-bottom: .5em}
+img.embedded.mid,
+img.embedded.bottom {margin-top: .5em}
+img.embedded.left   {float: left;  margin-right: 1em;}
+img.embedded.right  {float: right; margin-left: 1em;}
