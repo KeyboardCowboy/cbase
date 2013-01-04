@@ -8,3 +8,27 @@ img.embedded.mid,
 img.embedded.bottom {margin-top: .5em}
 img.embedded.left   {float: left;  margin-right: 1em;}
 img.embedded.right  {float: right; margin-left: 1em;}
+
+.vertical-tabs ul.vertical-tabs-list,
+.vertical-tabs ul.vertical-tabs-list li.first,
+.vertical-tabs ul.vertical-tabs-list li.first a {
+  -webkit-border-radius: 5px 0px 0px 0px;
+  border-radius: 5px 0px 0px 0px;
+}
+
+.vertical-tabs ul.vertical-tabs-list li.last,
+.vertical-tabs ul.vertical-tabs-list li.last a {
+  -webkit-border-radius: 0px 0px 0px 5px;
+  border-radius: 0px 0px 0px 5px;
+}
+
+.vertical-tabs ul.vertical-tabs-list li.selected a {
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(left,  #ffffff 0%, #fafafa 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(100%,#fafafa)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  #ffffff 0%,#fafafa 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #ffffff 0%,#fafafa 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #ffffff 0%,#fafafa 100%); /* IE10+ */
+  background: linear-gradient(to right,  #ffffff 0%,#fafafa 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fafafa',GradientType=1 ); /* IE6-9 */
+}

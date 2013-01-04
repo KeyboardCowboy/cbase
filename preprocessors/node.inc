@@ -13,6 +13,4 @@ if (!$vars['status'] && $type) {
     '#theme' => 'unpublished_indicator',
     '#position' => $type,
   );
-  //$vars['content']['body'][0]['#markup'] .= '<div class="unpublished-indicator ' . $type . '">&nbsp;</div>';
 }
-kpr($vars['content']);
