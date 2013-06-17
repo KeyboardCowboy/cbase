@@ -81,6 +81,20 @@ function _process_variables(&$vars, $hook, $theme, $directory = 'preprocessors')
 }
 
 /**
+ * Implements hook_form_alter().
+ */
+function cbase_form_alter(&$form, &$form_state, $form_id) {
+	// Add a Cancel link for node submission forms
+	if ($form['#id'] == 'node-form') {
+		$form['buttons']['cancel'] = array(
+			'#type' => 'markup',
+			'#value' => l(t('Cancel'), $_SERVER['HTTP_REFERER']),
+			'#weight' => 99,
+		);
+	}
+}
+
+/**
  * Implements hook_theme().
  */
 function cbase_theme($existing, $type, $theme, $path) {

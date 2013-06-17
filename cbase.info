@@ -4,6 +4,7 @@ core = 7.x
 version = 7.x-3.0-dev
 screenshot  = screenshot.jpg
 engine = phptemplate
+base theme = zen
 
 ; Stylesheets
 stylesheets[all][] = css/cbase.reset.css

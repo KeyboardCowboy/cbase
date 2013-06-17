@@ -22,6 +22,12 @@ img.embedded.right  {float: right; margin-left: 1em;}
   border-radius: 0px 0px 0px 5px;
 }
 
+.vertical-tabs ul.vertical-tabs-list li   {border-right: 1px solid #aaa;}
+.vertical-tabs ul.vertical-tabs-list li a {border-right: 2px solid #ccc;}
+
+.vertical-tabs ul.vertical-tabs-list li.selected,
+.vertical-tabs ul.vertical-tabs-list li.selected a {border-right: none;}
+
 .vertical-tabs ul.vertical-tabs-list li.selected a {
   background: #ffffff; /* Old browsers */
   background: -moz-linear-gradient(left,  #ffffff 0%, #fafafa 100%); /* FF3.6+ */

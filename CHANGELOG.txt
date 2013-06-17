@@ -1,30 +1,4 @@
-CBASE v7.x-2.x-dev, 2012-Sep-21 15:00:51 ChrisAlbrecht
+CBASE v7.x-3.x-dev
 --------------------------------------------------------------------------------
-- Added DRAFT indicator and extended CSS snippets
-- Fixed bug in JS matchHeight function to take padding and margins into account.
-
-CBASE v7.x-2.x-dev, 2012-Jun-27 09:59:35 ChrisAlbrecht
---------------------------------------------------------------------------------
-- Added vertical tabs and screenshot header to theme settings form.
-
-CBASE v7.x-2.x-dev, 2012-Jun-18 11:41:00 ChrisAlbrecht
---------------------------------------------------------------------------------
-- Added theme setting to exclude cbase css.
-
-CBASE v7.x-2.x-dev, 2012-Jun-18 09:01:25 ChrisAlbrecht
---------------------------------------------------------------------------------
-- Added LocalScroll library.
-
-CBASE v7.x-2.x-dev, 2012-Apr-03 12:10:57 ChrisAlbrecht
---------------------------------------------------------------------------------
-- Added data to the subtheme .info file to prevent menus from breaking.
-
-CBASE v7.x-2.x-dev, 2012-Mar-12 13:51:13 ChrisAlbrecht
---------------------------------------------------------------------------------
-- Added a subtheme template directory.
-- Altered the template.php process and preprocessors to not call out to subthemes
-  anymore.  This was causing issues in variable scope if subthemes were
-  implementing their own variables via the process and preprocess hooks.  A
-  common function now should be placed in each process and preprocess hook
-  in the subthemes.
-- Renamed cbase_get_ancestral_info to cbase_get_family_info.
+[17-Jun-2013:ChrisAlbrecht]
+- Spawning a new version of cBase.

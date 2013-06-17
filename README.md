@@ -1,16 +1,13 @@
-cBase Drupal Base Theme, 7.x-2.0
+cBase Drupal Base Theme, 7.x-3.0
 ================================================================================
 https://github.com/KeyboardCowboy/Cbase-Theme
 
-This base theme:
-- Improves the "Appearance" section UI with vertical tabs and theme ancestry.
+Version 3 of cBase is a subtheme of Zen and will provide HTML5, responsive
+panels layouts.
 
-- Provides additional theming preprocess hooks and variables through ancestry.
+The goal of this version of cBase will be to create a minimal base theme,
+stripping out the overabundance of classes and markup to create a more semantic
+and low-profile theme layer.
 
-- Allows system stylesheets to be turned off.
-
-- Provides options to enhance default settings and appearances for messages and
-  unpublished content.
-
-- Provides CSS to assist Admin, Admin Menu and Contextual modules to work
-  together.
+Version 3 also introduces the SASS preprocessor and basic theming functions for
+the FontAwesome library.
