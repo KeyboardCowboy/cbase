@@ -1,7 +1,7 @@
 name = CBase
-description = Base theme to support simple sub-theme implementation, functionality and settings.
+description = Custom responsive, panels-based base theme.
 core = 7.x
-version = 7.x-2.0-beta2
+version = 7.x-3.0-dev
 screenshot  = screenshot.jpg
 engine = phptemplate
 
@@ -25,3 +25,6 @@ settings[cbase_css][] = system.base.css
 settings[cbase_css][] = system.menus.css
 settings[cbase_css][] = system.messages.css
 settings[cbase_css][] = system.theme.css
+
+; Plugins
+plugins[panels][layouts] = panels

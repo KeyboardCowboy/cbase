@@ -1,0 +1,41 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/cpool01\/sites\/wedding\/themes\/wed1\/panels\/golden_stacked\/golden_stacked\.scss}line{font-family:\000031}}
+.panel-golden-stacked {
+  margin-top: 0;
+  padding-top: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/cpool01\/sites\/wedding\/themes\/wed1\/panels\/golden_stacked\/golden_stacked\.scss}line{font-family:\000035}}
+.panel-golden-stacked .panel-col-top, .panel-golden-stacked .panel-col-bottom {
+  width: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/cpool01\/sites\/wedding\/themes\/wed1\/panels\/golden_stacked\/golden_stacked\.scss}line{font-family:\000039}}
+.panel-golden-stacked .panel-col-top .inside {
+  margin-bottom: .5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/cpool01\/sites\/wedding\/themes\/wed1\/panels\/golden_stacked\/golden_stacked\.scss}line{font-family:\0000314}}
+.panel-golden-stacked .panel-separator {
+  margin: 0 0 1em 0;
+}
+@media (min-width: 701px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/cpool01\/sites\/wedding\/themes\/wed1\/panels\/golden_stacked\/golden_stacked\.scss}line{font-family:\0000319}}
+  .panel-golden-stacked .panel-col-first {
+    display: inline-block;
+    vertical-align: top;
+    width: 62%;
+    margin-right: -5px;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/cpool01\/sites\/wedding\/themes\/wed1\/panels\/golden_stacked\/golden_stacked\.scss}line{font-family:\0000325}}
+  .panel-golden-stacked .panel-col-first .inside {
+    margin: 0 0 0 0;
+    padding-right: 1em;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/cpool01\/sites\/wedding\/themes\/wed1\/panels\/golden_stacked\/golden_stacked\.scss}line{font-family:\0000331}}
+  .panel-golden-stacked .panel-col-last {
+    display: inline-block;
+    vertical-align: top;
+    width: 38%;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/cpool01\/sites\/wedding\/themes\/wed1\/panels\/golden_stacked\/golden_stacked\.scss}line{font-family:\0000336}}
+  .panel-golden-stacked .panel-col-last .inside {
+    margin: 0 0 1em 0.5em;
+  }
+}
