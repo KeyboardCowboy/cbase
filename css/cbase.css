@@ -1,0 +1,817 @@
+/**
+ * DISCLAIMER
+ * This CSS file was compiled by SASS and should not be directly edited.  Any
+ * changes made to this file will be overwritten the next time it is compiled.
+ */
+/* normalize.css v2.1.1 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\0000322}}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\0000332}}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\0000341}}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\0000350}}
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Prevent system color scheme's background color being used in Firefox, IE,
+ *    and Opera.
+ * 2. Prevent system color scheme's text color being used in Firefox, IE, and
+ *    Opera.
+ * 3. Set default font family to sans-serif.
+ * 4. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\0000368}}
+html {
+  background: #fff;
+  /* 1 */
+  color: #000;
+  /* 2 */
+  font-family: sans-serif;
+  /* 3 */
+  -ms-text-size-adjust: 100%;
+  /* 4 */
+  -webkit-text-size-adjust: 100%;
+  /* 4 */
+}
+
+/**
+ * Remove default margin.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\0000380}}
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\0000392}}
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003101}}
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003114}}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003123}}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003132}}
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003140}}
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003148}}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003158}}
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003170}}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003179}}
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003187}}
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003195}}
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003204}}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003211}}
+sup {
+  top: -0.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003215}}
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003227}}
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003235}}
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003247}}
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003259}}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003270}}
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003284}}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003296}}
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003308}}
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003323}}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003333}}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003343}}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003354}}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003367}}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003376}}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003386}}
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_normalize\.scss}line{font-family:\00003399}}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
++---------------------------------------------------------------------+
+|        _                               _         _                  |
+|       | |_  _   _  _ __    ___  _ __  | |  __ _ | |_  ___           |
+|       | __|| | | || '_ \  / _ \| '_ \ | | / _` || __|/ _ \          |
+|       | |_ | |_| || |_) ||  __/| |_) || || (_| || |_|  __/          |
+|        \__| \__, || .__/  \___|| .__/ |_| \__,_| \__|\___|          |
+|             |___/ |_|          |_|                                  |
+|                                                                     |
+|                                                                     |
+| URL: http://typeplate.com                                           |
+| VERSION: 1.0.1                                                      |
+| Github: https://github.com/typePlate/typeplate.github.com           |
+| AUTHORS: Zachary Kain (@zakkain) & Dennis Gaebel (@gryghostvisuals) |
+| LICENSE: Creative Commmons                                          |
+| http://creativecommons.org/licenses/by/3.0                          |
+|                                                                     |
++---------------------------------------------------------------------+
+*/
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");
+  unicode-range: U+0026;
+}
+
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia");
+  unicode-range: U+270C;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003263}}
+body {
+  word-wrap: break-word;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003267}}
+pre code {
+  word-wrap: normal;
+}
+
+/**
+ * Dropcap Sass @include
+ * Use the following Sass @include with any selector you feel necessary.
+ *
+	@include dropcap($float: left, $font-size: 4em, $font-family: inherit, $text-indent: 0, $margin: inherit, $padding: inherit, $color: inherit, $lineHeight: 1, $bg: transparent);
+ *
+ * Extend this object into your custom stylesheet.
+ *
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003378}}
+html {
+  font: normal 112.5%/1.65 serif;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003382}}
+body {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  color: #444444;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003398}}
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003413}}
+.tera {
+  font-size: 117px;
+  font-size: 6.5rem;
+  margin-bottom: 0.25385rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003413}}
+.giga {
+  font-size: 90px;
+  font-size: 5rem;
+  margin-bottom: 0.33rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003413}}
+.mega {
+  font-size: 72px;
+  font-size: 4rem;
+  margin-bottom: 0.4125rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003413}}
+.alpha, h1 {
+  font-size: 60px;
+  font-size: 3.33333rem;
+  margin-bottom: 0.495rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003413}}
+.beta, h2 {
+  font-size: 48px;
+  font-size: 2.66667rem;
+  margin-bottom: 0.61875rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003413}}
+.gamma, h3 {
+  font-size: 36px;
+  font-size: 2rem;
+  margin-bottom: 0.825rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003413}}
+.delta, h4 {
+  font-size: 24px;
+  font-size: 1.33333rem;
+  margin-bottom: 1.2375rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003413}}
+.epsilon, h5 {
+  font-size: 21px;
+  font-size: 1.16667rem;
+  margin-bottom: 1.41429rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003413}}
+.zeta, h6 {
+  font-size: 18px;
+  font-size: 1rem;
+  margin-bottom: 1.65rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003453}}
+p {
+  margin: 0 0 1.5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003455}}
+p + p {
+  text-indent: 1.5em;
+  margin-top: -1.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003479}}
+abbr,
+acronym,
+blockquote,
+code,
+dir,
+kbd,
+listing,
+plaintext,
+q,
+samp,
+tt,
+var,
+xmp {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -o-hyphens: none;
+  hyphens: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003496}}
+pre code {
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003501}}
+pre {
+  white-space: pre;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003505}}
+code {
+  white-space: pre;
+  font-family: monospace;
+}
+
+/**
+ * Abbreviations Markup
+ *
+	<abbr title="hyper text markup language">HMTL</abbr>
+ *
+ * Extend this object into your markup.
+ *
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003521}}
+abbr {
+  font-variant: small-caps;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: gray;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003523}}
+abbr:hover {
+  cursor: help;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003537}}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #222222;
+}
+
+/**
+ * Lining Definition Style Markup
+ *
+	<dl class="lining">
+		<dt><b></b></dt>
+		<dd></dd>
+	</dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003319}}
+.lining dt,
+.lining dd {
+  display: inline;
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003326}}
+.lining dt + dt:before,
+.lining dd + dt:before {
+  content: "\A";
+  white-space: pre;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003334}}
+.lining dd + dd:before {
+  content: ", ";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003338}}
+.lining dd:before {
+  content: ": ";
+  margin-left: -0.2rem;
+}
+
+/**
+ * Dictionary Definition Style Markup
+ *
+	<dl class="dictionary-style">
+		<dt><b></b></dt>
+			<dd></dd>
+	</dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003346}}
+.dictionary-style dt {
+  display: inline;
+  counter-reset: definitions;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003350}}
+.dictionary-style dt + dt:before {
+  content: ", ";
+  margin-left: -0.2rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003356}}
+.dictionary-style dd {
+  display: block;
+  counter-increment: definitions;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003359}}
+.dictionary-style dd:before {
+  content: counter(definitions,decimal) ". ";
+}
+
+/**
+ * Stats Tab Markup
+ *
+	<ul class="stats-tabs">
+		<li><a href="#">[value]<b>[name]</b></a></li>
+	</ul>
+ *
+ * Extend this object into your markup.
+ *
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003587}}
+.stats-tabs {
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003589}}
+.stats-tabs li {
+  display: inline-block;
+  margin: 0 0.625rem 0 0;
+  padding: 0 0.625rem 0 0;
+  border-right: 0.125rem solid #cccccc;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003594}}
+.stats-tabs li:last-child {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003599}}
+.stats-tabs li a {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003603}}
+.stats-tabs li a b {
+  display: block;
+  margin: 0.125rem 0 0 0;
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+
+/**
+ * Blockquote Markup
+ *
+	<blockquote cite="">
+		<p>&Prime;&Prime;</p>
+		<cite>
+			<small><a href=""></a></small>
+		</cite>
+	</blockquote>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Pull Quotes Markup
+ *
+	<aside class="pull-quote">
+		<blockquote>
+			<p></p>
+		</blockquote>
+	</aside>
+ *
+ * Extend this object into your custom stylesheet.
+ *
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003683}}
+.pull-quote {
+  position: relative;
+  padding: 1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003665}}
+.pull-quote:before, .pull-quote:after {
+  height: 1em;
+  opacity: 0.15;
+  position: absolute;
+  font-size: 4em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003671}}
+.pull-quote:before {
+  content: '“';
+  top: 0;
+  left: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/private\/var\/www\/htdocs\/dev7\/sites\/all\/themes\/contrib\/cbase\/css\/libraries\/_typeplate\.scss}line{font-family:\00003676}}
+.pull-quote:after {
+  content: '”';
+  bottom: 0;
+  right: 0;
+}
+
+/**
+ * Figures Markup
+ *
+	<figure>
+		<figcaption>
+			<strong>Fig. 4.2 | </strong>Type Anatomy, an excerpt from Mark Boulton's book<cite title="http://designingfortheweb.co.uk/book/part3/part3_chapter11.php">"Designing for the Web"</cite>
+		</figcaption>
+	</figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Footnote Markup : Replace 'X' with your unique number for each footnote
+ *
+	<article>
+		<p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
+		<footer>
+			<ol class="foot-notes">
+				<li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
+			</ol>
+		</footer>
+	</article>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Calculate font-sizes and line-heights.
+ */
