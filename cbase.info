@@ -7,9 +7,7 @@ engine = phptemplate
 base theme = zen
 
 ; Stylesheets
-stylesheets[all][] = css/cbase.reset.css
-stylesheets[all][] = css/cbase.base.css
-stylesheets[all][] = css/cbase.messages.css
+stylesheets[all][] = css/cbase.css
 
 ; Scripts
 scripts[] = js/scrollTo-1.4.2.js
@@ -18,10 +16,8 @@ scripts[] = js/cbase.js
 
 ; Theme Settings
 settings[cbase_localscroll] = 1
+settings[cbase_fontawesome] = 0
 settings[unpublished_indicator] = 'unpublished'
-settings[cbase_css][] = cbase.base.css
-settings[cbase_css][] = cbase.reset.css
-settings[cbase_css][] = cbase.messages.css
 settings[cbase_css][] = system.base.css
 settings[cbase_css][] = system.menus.css
 settings[cbase_css][] = system.messages.css

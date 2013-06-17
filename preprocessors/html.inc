@@ -29,3 +29,18 @@ if (theme_get_setting('cbase_localscroll')) {
   ";
   drupal_add_js($js, 'inline');
 }
+
+/**
+ * Add the bootstrap CDN for fontawesome
+ */
+if (theme_get_setting('cbase_fontawesome')) {
+  $element = array(
+    '#type' => 'html_tag',
+    '#tag' => 'link',
+    '#attributes' => array(
+      'href' => "//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css",
+      'rel' => "stylesheet",
+    ),
+  );
+  drupal_add_html_head($element);
+}

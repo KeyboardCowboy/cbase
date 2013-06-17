@@ -64,6 +64,13 @@ function cbase_form_system_theme_settings_alter(&$form, &$form_state) {
     '#default_value' => theme_get_setting('cbase_unpublished_indicator'),
   );
 
+  // @todo: Allow for version specification.
+  $form['ui']['cbase_fontawesome'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Enable FontAwesome'),
+    '#default_value' => theme_get_setting('cbase_fontawesome'),
+  );
+
   // Adjust labels
   $form['theme_settings']['#title'] = t('Features');
   $form['favicon']['#title']        = t('Shortcut Icon (Favicon)');
