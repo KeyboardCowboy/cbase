@@ -42,5 +42,5 @@ if (theme_get_setting('cbase_fontawesome')) {
       'rel' => "stylesheet",
     ),
   );
-  drupal_add_html_head($element);
+  drupal_add_html_head($element, 'cbase_fontawesome');
 }
