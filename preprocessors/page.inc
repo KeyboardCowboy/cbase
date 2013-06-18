@@ -29,15 +29,8 @@ if ($main_menu_name == $sec_menu_name) {
 // If the source menus are different, simply load the menu tree as the
 // secondary menu element.
 else {
-  //$vars['secondary_menu'] = menu_tree_output(menu_build_tree($sec_menu_name, array('min_depth' => 1, 'max_depth' => 3)));
   $vars['secondary_menu'] = menu_tree_output(menu_tree_page_data($sec_menu_name, 3));
 }
-
-// Apply theming to the secondary menu
-/*if (!empty($vars['secondary_menu'])) {
-  $vars['secondary_menu']['#attributes']['id'][] = 'leftnav';
-  $vars['secondary_menu']['#theme_wrappers'] = array('secondary_menu_tree');
-}*/
 
 /**
  * Add a page suggestion to the theme hooks for a panels layout page.
@@ -53,3 +46,4 @@ if (module_exists('panels')) {
     }
   }
 }
+

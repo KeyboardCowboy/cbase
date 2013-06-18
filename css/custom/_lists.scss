@@ -1,0 +1,21 @@
+// Standard list definitions
+/**
+ * Lists entered by users in content.
+ */
+.pane-content, .field-name-body, .field-name-content, .content {
+  ol, ul {
+    margin-left: 2em;
+
+    li {
+      padding: .25em 0;
+    }
+  }
+
+  ol li {
+    list-style: decimal outside none;
+  }
+
+  ul li {
+    list-style: disc outside none;
+  }
+}

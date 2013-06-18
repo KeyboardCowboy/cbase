@@ -44,3 +44,10 @@ if (theme_get_setting('cbase_fontawesome')) {
   );
   drupal_add_html_head($element, 'cbase_fontawesome');
 }
+
+/**
+ * Clean out body attributes.
+ */
+$vars['body_attributes'] = array(
+  //'class' => array(),
+) + $vars['attributes_array'];
