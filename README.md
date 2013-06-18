@@ -9,5 +9,9 @@ The goal of this version of cBase will be to create a minimal base theme,
 stripping out the overabundance of classes and markup to create a more semantic
 and low-profile theme layer.
 
-Version 3 also introduces the SASS preprocessor and basic theming functions for
-the FontAwesome library.
+Version 3 also introduces various external libraries:
+
+- FontAwesome 3.2.0 (CDN)
+- Zen-Grids 2.0.0-alpha2
+- Normalize
+- Typeplate

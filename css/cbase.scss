@@ -10,6 +10,9 @@
 // Required the bourbon repo, as provided by CodeKit
 @import 'bourbon';
 
+// Import zen grids for responsive layouts (move to panels?)
+@import 'libraries/zen-grids/zen-grids';
+
 // Use the normalizer instead of a reset stylesheet
 @import 'libraries/normalize';
 
