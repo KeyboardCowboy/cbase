@@ -6,6 +6,12 @@ screenshot  = screenshot.jpg
 engine = phptemplate
 base theme = zen
 
+; Regions
+regions[page_top]    = 'Page Top'
+regions[content]     = 'Main Content'
+regions[footer]      = 'Footer'
+regions[page_bottom] = 'Page Bottom'
+
 ; Stylesheets
 stylesheets[all][] = css/cbase.css
 

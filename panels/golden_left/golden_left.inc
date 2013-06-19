@@ -2,11 +2,12 @@
 
 // Plugin definition
 $plugin = array(
-  'title' => t('Golden stacked'),
-  'category' => t('Columns: 2'),
-  'icon' => 'golden_stacked.png',
-  'theme' => 'panels_golden_stacked',
-  'css' => 'golden_stacked.css',
+  'title' => t('Golden Left'),
+  'category' => t('cBase'),
+  'icon' => 'golden_left.png',
+  'theme' => 'panels_golden_left',
+  'page' => 'page__cbase_panel',
+  'css' => 'golden_left.css',
   'regions' => array(
     'top' => t('Top'),
     'left' => t('Left side'),

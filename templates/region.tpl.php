@@ -27,7 +27,7 @@
  */
 ?>
 <?php if ($content): ?>
-  <section <?php print drupal_attributes($region_attributes); ?>>
+  <div <?php print drupal_attributes($region_attributes); ?>>
     <?php print $content; ?>
-  </section>
+  </div>
 <?php endif; ?>
