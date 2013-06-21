@@ -7,8 +7,39 @@
  * Implementation of template_preprocess().
  */
 function cbase_preprocess(&$vars, $hook) {
-  // Add some preprocess suggestions
+  // Add our custom panels suggestion to the panel hook.
+  if (isset($vars['layout']['template'])) {
+    $vars['theme_hook_suggestions'][] = "panel__{$vars['layout']['template']}";
+  }
 
+  // Add some preprocess suggestions
+  switch ($hook) {
+    case 'page':
+      if (module_exists('panels')) {
+        $display = panels_get_current_page_display();
+        if (is_object($display) && isset($display->renderer_handler->plugins['layout']['template'])) {
+          $vars['theme_hook_suggestions'][] = "page__{$display->renderer_handler->plugins['layout']['template']}";
+        }
+      }
+      break;
+
+    case 'panels_pane':
+      $type   = $vars['pane']->type;
+      $panel  = $vars['pane']->panel;
+      $layout = $vars['display']->layout;
+
+      $vars['theme_hook_suggestions'] += array(
+        "panels_pane__{$layout}__{$type}",
+        "panels_pane__{$layout}__{$panel}__{$type}",
+        "panels_pane__{$layout}",
+        "panels_pane__{$panel}",
+        "panels_pane__{$layout}__{$panel}",
+        "panels_pane__{$panel}__{$type}",
+        "panels_pane__{$layout}__{$type}",
+        "panels_pane__{$layout}__{$panel}__{$type}",
+      );
+      break;
+  }
 
   _process_variables($vars, $hook, 'cbase', 'preprocessors');
 }
@@ -17,7 +48,7 @@ function cbase_preprocess(&$vars, $hook) {
  * Implementation of template_process().
  */
 function cbase_process(&$vars, $hook) {
-  _process_variables($vars, $hook, 'cbase', 'processors');
+  //_process_variables($vars, $hook, 'cbase', 'processors');
 }
 /******************************************************************************/
 
@@ -55,7 +86,10 @@ function _process_variables(&$vars, $hook, $theme, $directory = 'preprocessors')
   }
 
   // Candidate preprocessors
-  //dpm($_vars['pp'], $hook);
+  if (0) {
+    print "$hook =>";
+    kpr($_vars['pp'], FALSE, $hook);
+  }
 
   // Load any available preprocessors
   foreach ($_vars['pp'] as $file) {
