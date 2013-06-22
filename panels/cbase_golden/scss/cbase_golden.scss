@@ -1,6 +1,6 @@
 @import 'golden';
 
-.cbase-panel-golden .columns {
+.cbase-panel-golden {
   @include zen-grid-container;
 }
 
@@ -29,6 +29,15 @@
     > footer {
       @include zen-clear;
       @include zen-grid-item(12, 1);
+    }
+  }
+}
+
+@media all and (max-width: 50em) {
+  .cbase-panel-golden {
+    > header, > .columns, > footer {
+      @include zen-clear;
+      @include zen-grid-item(12,1);
     }
   }
 }

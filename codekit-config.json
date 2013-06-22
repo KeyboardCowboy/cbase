@@ -596,18 +596,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/css\/custom\/_common.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/custom\/_common.scss",
-      "outputStyle" : 1,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/css\/css\/_common.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/css\/libraries\/zen-grids\/zen-grids\/_background.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -617,6 +605,18 @@
       "outputStyle" : 1,
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/css\/libraries\/zen-grids\/css\/_background.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/css\/custom\/_common.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/custom\/_common.scss",
+      "outputStyle" : 1,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/css\/css\/_common.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -873,14 +873,14 @@
       "debugStyle" : 0
     },
     "\/panels\/cbase_golden\/scss\/cbase_golden_admin.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
       "hidden" : 0,
-      "outputPathIsSetByUser" : 1,
+      "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/panels\/cbase_golden\/scss\/cbase_golden_admin.scss",
       "outputStyle" : 1,
       "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/panels\/cbase_golden\/cbase_golden_admin.css",
+      "outputAbbreviatedPath" : "\/panels\/cbase_golden\/css\/cbase_golden_admin.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
