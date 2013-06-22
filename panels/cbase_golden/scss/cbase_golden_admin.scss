@@ -1,0 +1,34 @@
+@import 'golden';
+
+/**
+ * DnD Admin UI
+ */
+#panels-dnd-main {
+  .cbase-panel-golden {
+    header {
+      @include zen-grid-item(12, 1);
+      margin-bottom: 2em;
+    }
+
+    .columns {
+      @include zen-clear;
+      @include zen-grid-container;
+      margin-bottom: 2em;
+    }
+
+    &.left .columns {
+      .col-1 {@include zen-grid-item(8, 1);}
+      .col-2 {@include zen-grid-item(4, 9);}
+    }
+
+    &.right .columns {
+      .col-1 {@include zen-grid-item(8, 5);}
+      .col-2 {@include zen-grid-item(4, 1);}
+    }
+
+    footer {
+      @include zen-clear;
+      @include zen-grid-item(12, 1);
+    }
+  }
+}

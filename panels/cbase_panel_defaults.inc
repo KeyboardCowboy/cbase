@@ -2,7 +2,17 @@
 /**
  * Set default values for cbase panels layouts.
  */
-$element['main'] = (!empty($element['main']) ? $element['main'] : 'div');
-$element['content'] = (!empty($element['content']) ? $element['content'] : 'div');
-$panel_attributes = (!empty($panel_attributes) ? (array) $panel_attributes : array());
-$messages = (isset($messages) ? $messages : '');
+if ($renderer->admin) {
+  $messages = (isset($messages) ? $messages : '');
+
+  switch ($layout['name']) {
+    case 'cbase_golden':
+      $element = array(
+        'main' => 'div',
+        'content' => 'div',
+      );
+      $panel_attributes = array('class' => array('cbase-panel-golden', $settings['golden_main_position']));
+      break;
+  }
+}
+//dpm(get_defined_vars());

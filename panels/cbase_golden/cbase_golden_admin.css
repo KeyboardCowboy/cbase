@@ -1,0 +1,94 @@
+/**
+ * DnD Admin UI
+ */
+#panels-dnd-main .cbase-panel-golden header {
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-bottom: 2em;
+}
+#panels-dnd-main .cbase-panel-golden .columns {
+  clear: left;
+  margin-bottom: 2em;
+}
+#panels-dnd-main .cbase-panel-golden .columns:before, #panels-dnd-main .cbase-panel-golden .columns:after {
+  content: "";
+  display: table;
+}
+#panels-dnd-main .cbase-panel-golden .columns:after {
+  clear: both;
+}
+#panels-dnd-main .cbase-panel-golden.left .columns .col-1 {
+  float: left;
+  width: 66.66667%;
+  margin-left: 0%;
+  margin-right: -100%;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+#panels-dnd-main .cbase-panel-golden.left .columns .col-2 {
+  float: left;
+  width: 33.33333%;
+  margin-left: 66.66667%;
+  margin-right: -100%;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+#panels-dnd-main .cbase-panel-golden.right .columns .col-1 {
+  float: left;
+  width: 66.66667%;
+  margin-left: 33.33333%;
+  margin-right: -100%;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+#panels-dnd-main .cbase-panel-golden.right .columns .col-2 {
+  float: left;
+  width: 33.33333%;
+  margin-left: 0%;
+  margin-right: -100%;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+#panels-dnd-main .cbase-panel-golden footer {
+  clear: left;
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}

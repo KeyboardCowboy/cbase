@@ -17,6 +17,11 @@ if (isset($vars['css_id'])) {
   $vars['panel_attributes']['id'] = $vars['css_id'];
 }
 
+// Check for the golden content position.
+if (isset($vars['settings']['golden_main_position'])) {
+  $vars['panel_attributes']['class'][] = $vars['settings']['golden_main_position'];
+}
+
 // Set the appropriate elements based on whether this is a node rendering or not.
 if ($node = menu_get_object()) {
   $vars['node'] = $node;
@@ -31,6 +36,3 @@ else {
     'content' => 'section',
   );
 }
-
-
-//kpr($vars);
