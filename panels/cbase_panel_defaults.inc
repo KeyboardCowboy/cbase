@@ -11,7 +11,7 @@ if ($renderer->admin) {
         'main' => 'div',
         'content' => 'div',
       );
-      $panel_attributes = array('class' => array('cbase-panel-golden', $settings['golden_main_position']));
+      $panel_attributes = array('class' => array('cbase-panel-golden', isset($settings['golden_main_position']) ? $settings['golden_main_position'] : 'left'));
       break;
   }
 }
