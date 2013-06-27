@@ -1,21 +1,37 @@
 // Standard list definitions
-/**
- * Lists entered by users in content.
- */
-.pane-content, .field-name-body, .field-name-content, .content {
-  ol, ul {
-    margin-left: 2em;
 
-    li {
-      padding: .25em 0;
-    }
+// Base list styles, as used in content entry.
+ol, ul {
+  margin: 0 0 1em 2em;
+
+  li {
+    padding: .25em 0;
+  }
+}
+
+ol li {
+  list-style: decimal outside none;
+}
+
+ul li {
+  list-style: disc outside none;
+}
+
+// Lists used as menus.
+ul.menu, ol.menu {
+  margin-left: 0;
+
+  li {
+    list-style: none;
+    list-style-image: none;
   }
 
-  ol li {
-    list-style: decimal outside none;
-  }
+  &.inline {
 
-  ul li {
-    list-style: disc outside none;
   }
+}
+
+// Drupal generated lists of content.
+ul.item-list, ol.item-list {
+
 }
