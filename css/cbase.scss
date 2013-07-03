@@ -14,10 +14,11 @@
 @import 'libraries/zen-grids/zen-grids';
 
 // Use the normalizer instead of a reset stylesheet
-@import 'libraries/normalize';
+@import 'components/global/normalize';
 
-// Add the TypePlate library to help with typography
-@import 'libraries/typeplate';
+// We separated typeplate into tools and components for reuse in subthemes
+@import 'tools/typeplate';
+@import 'components/global/typeplate';
 
 // Add structural assistance
 @import 'custom/ost-structure';

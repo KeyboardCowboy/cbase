@@ -14,4 +14,4 @@ Version 3 also introduces various external libraries:
 - FontAwesome 3.2.0 (CDN)
 - Zen-Grids 2.0.0-alpha2
 - Normalize 2.1.1
-- Typeplate 1.0.1
+- Typeplate 1.1.0
