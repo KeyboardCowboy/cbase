@@ -10,27 +10,22 @@
 // Required the bourbon repo, as provided by CodeKit
 @import 'bourbon';
 
+// -- VARIABLES
+@import 'vars/vars-typeplate';
+
+// -- GRID
 // Import zen grids for responsive layouts (move to panels?)
 @import 'orion/libraries/zen-grids/zen-grids';
 
-// Use the normalizer instead of a reset stylesheet
-@import 'orion/components/global/normalize';
+// -- FUNCTIONS & MIXINS
+@import 'orion/components/typeplate';
+@import 'orion/mixins/ost-structure';
+@import 'orion/mixins/ost-typography';
+@import 'orion/mixins/ost-styles';
+@import 'orion/mixins/ost-drupalqf';
 
-// We separated typeplate into tools and components for reuse in subthemes
-@import 'orion/tools/typeplate';
-@import 'orion/components/global/typeplate';
+// -- PLACEHOLDERS
 
-// Add structural assistance
-@import 'orion/custom/ost-structure';
-
-// Add typographical assistance
-@import 'orion/custom/ost-typography';
-
-// Add style and CSS3 enhancements
-@import 'orion/custom/ost-styles';
-
-// Add common drupal quickfixes
-@import 'orion/custom/ost-drupalqf';
-
-// Add styles to work with JS
-@import 'orion/custom/ost-js';
+// -- CSS DEFINITIONS
+@import 'orion/components/base';
+@import 'orion/components/lists';
