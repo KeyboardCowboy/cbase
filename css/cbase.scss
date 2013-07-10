@@ -11,26 +11,26 @@
 @import 'bourbon';
 
 // Import zen grids for responsive layouts (move to panels?)
-@import 'libraries/zen-grids/zen-grids';
+@import 'orion/libraries/zen-grids/zen-grids';
 
 // Use the normalizer instead of a reset stylesheet
-@import 'components/global/normalize';
+@import 'orion/components/global/normalize';
 
 // We separated typeplate into tools and components for reuse in subthemes
-@import 'tools/typeplate';
-@import 'components/global/typeplate';
+@import 'orion/tools/typeplate';
+@import 'orion/components/global/typeplate';
 
 // Add structural assistance
-@import 'custom/ost-structure';
+@import 'orion/custom/ost-structure';
 
 // Add typographical assistance
-@import 'custom/ost-typography';
+@import 'orion/custom/ost-typography';
 
 // Add style and CSS3 enhancements
-@import 'custom/ost-styles';
+@import 'orion/custom/ost-styles';
 
 // Add common drupal quickfixes
-@import 'custom/ost-drupalqf';
+@import 'orion/custom/ost-drupalqf';
 
 // Add styles to work with JS
-@import 'custom/ost-js';
+@import 'orion/custom/ost-js';
