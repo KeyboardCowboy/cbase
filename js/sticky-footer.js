@@ -5,26 +5,31 @@
  * http://css-tricks.com/snippets/jquery/jquery-sticky-footer
  */
 (function ($) {
-  $(document).ready(function() {
+  $.fn.stickyFooter = function() {
+    var f = $(this);
+
     // Window load event used just in case window height is dependant upon images
     $(window).bind("load", function() {
-      var footerHeight = 0,
-          $footer = $("footer#site-footer");
+      var fh = 0;
 
+      // Instantiate
       positionFooter();
 
+      /**
+       * Check the position of the footer
+       */
       function positionFooter() {
-        footerHeight = $footer.height();
+        fh = f.height();
 
-        if (($(document.body).height() + footerHeight) < $(window).height()) {
-          $footer.addClass('fixed');
+        if (($(document.body).height() + fh) < $(window).height()) {
+          f.addClass('fixed-bottom');
         }
         else {
-          $footer.removeClass('fixed');
+          f.removeClass('fixed-bottom');
         }
       }
 
       $(window).scroll(positionFooter).resize(positionFooter);
     });
-  });
+  };
 })(jQuery);

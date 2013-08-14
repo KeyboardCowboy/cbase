@@ -23,12 +23,8 @@ function cbase_form_system_theme_settings_alter(&$form, &$form_state) {
 
   $form['style']['cbase_css'] = array(
     '#type' => 'checkboxes',
-    '#title' => t('Enable/Disable Base Stylesheets'),
-    '#description' => t('CBase provides helpful stylesheets to get started and Drupal adds 4 stylesheets be default.  You can optionally enable/disable any of these stylesheets for this theme here.'),
+    '#title' => t('Enable/Disable Default Stylesheets'),
     '#options' => array(
-      'cbase.reset.css'     => t('CBase Reset Stylesheet (cbase.reset.css)'),
-      'cbase.base.css'      => t('CBase Base Styles (cbase.base.css)'),
-      'cbase.messages.css'  => t('CBase Message Styles (cbase.messages.css)'),
       'system.base.css'     => t('System Base Styles (system.base.css)'),
       'system.menus.css'    => t('System Menu Styles (system.menus.css)'),
       'system.messages.css' => t('System Message Styles (system.messages.css)'),
@@ -42,6 +38,12 @@ function cbase_form_system_theme_settings_alter(&$form, &$form_state) {
     '#type' => 'fieldset',
     '#title' => t('User Interface'),
     '#collapsible' => TRUE,
+  );
+  // @todo: Allow for version specification.
+  $form['ui']['cbase_fontawesome'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Enable FontAwesome'),
+    '#default_value' => theme_get_setting('cbase_fontawesome'),
   );
   $form['ui']['cbase_localscroll'] = array(
     '#type' => 'checkbox',
@@ -63,12 +65,12 @@ function cbase_form_system_theme_settings_alter(&$form, &$form_state) {
     ),
     '#default_value' => theme_get_setting('cbase_unpublished_indicator'),
   );
-
-  // @todo: Allow for version specification.
-  $form['ui']['cbase_fontawesome'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Enable FontAwesome'),
-    '#default_value' => theme_get_setting('cbase_fontawesome'),
+  $form['ui']['cbase_sticky_footer'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Sticky Footer'),
+    '#description' => t('Enter the CSS selector for a footer to attach to the bottom.'),
+    '#size' => 20,
+    '#default_value' => theme_get_setting('cbase_sticky_footer'),
   );
 
   // Adjust labels

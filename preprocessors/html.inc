@@ -16,15 +16,35 @@ foreach ($condsheets as $themename => $theme_conditions) {
 }
 
 /**
- * Implement localscroll if selected.
+ * Implement desired JS addons.
  */
-if (theme_get_setting('cbase_localscroll')) {
+$localscroll = theme_get_setting('cbase_localscroll');
+$stickyfooter = theme_get_setting('cbase_sticky_footer');
+if ($localscroll || $stickyfooter) {
   $js = "
   (function ($) {
-    $(document).ready(function() {
-      // Implement localscroll.
-      $.localScroll({duration: 500});
-    });
+    $(document).ready(function() {";
+
+    // Prep localscroll
+    if ($localscroll) {
+      drupal_add_js($vars['theme_paths']['cbase'] . '/js/scrollTo-1.4.2.js');
+      drupal_add_js($vars['theme_paths']['cbase'] . '/js/localscroll-1.2.7.js');
+      $js .= "
+        // Implement localscroll.
+        $.localScroll({duration: 500});
+      ";
+    }
+
+    // Prep Sticky Footer
+    if ($stickyfooter) {
+      drupal_add_js($vars['theme_paths']['cbase'] . '/js/sticky-footer.js');
+      $js .= "
+        // Implement localscroll.
+        $('" . $stickyfooter . "').stickyFooter();
+      ";
+    }
+
+  $js .= "  });
   })(jQuery);
   ";
   drupal_add_js($js, 'inline');
