@@ -1,0 +1,56 @@
+/**
+ * Baseline styles and helpers
+ */
+body {
+  margin: 0 auto;
+}
+
+// Standard list definitions
+
+// Base list styles, as used in content entry.
+ol, ul {
+  margin: 0 0 1em 2em;
+
+  li {
+    padding: .25em 0;
+  }
+}
+
+ol li {
+  list-style: decimal outside none;
+}
+
+ul li {
+  list-style: disc outside none;
+}
+
+// Lists used as menus.
+ul.menu, ol.menu {
+  margin-left: 0;
+
+  li {
+    list-style: none;
+    list-style-image: none;
+  }
+
+  &.inline {
+
+  }
+}
+
+// Drupal generated lists of content.
+ul.item-list, ol.item-list {
+
+}
+
+// Font awesome helpers.
+.icon-left  {margin-right: 1em;}
+.icon-right {margin-left: 1em;}
+[class^="icon-"], [class*=" icon-"] {text-decoration: none;}
+
+// Fixed Footers
+.fixed-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
